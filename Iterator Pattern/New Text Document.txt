@@ -1,0 +1,71 @@
+# query getSingleUser($userid : String!) {
+#      user(id: $userid) {
+#     		name
+# 				email
+#     		admin
+#     }
+# }
+
+# query getUsers {
+#      users {
+#     		name
+# 				email
+#     		admin
+#     }
+# }
+
+# query getUsers($page : Int , $limit : Int){
+#   	allUsers(page : $page , limit : $limit) {
+#       users {
+#         name
+#         email
+#         age
+#         address
+#         createdAt
+#       }
+#     	paginate {
+#         page
+#         limit
+#       }
+#   	}
+# }
+
+# query getArticle($id : String!) {
+#   article(id : $id) {
+#     user {
+#       name
+#       age
+#     }
+#     comments {
+#       user {
+#         email
+#       }
+#       comment
+#     }
+#     title
+#     body
+#   }
+# }
+
+# query getAllArticles($page : Int , $limit : Int) {
+#   allArticles(page : $page , limit : $limit) {
+#     articles {
+#       user {
+#         name 
+#         email
+#       }
+#       comments {
+#         comment
+#         user {
+#           name
+#         }
+#       }
+#       title
+#       body
+#     }
+#     paginate {
+#       limit
+#       page
+#     }
+#   }
+# }
