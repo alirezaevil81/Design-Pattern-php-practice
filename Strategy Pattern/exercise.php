@@ -42,4 +42,6 @@ class NotificationService {
 }
 
 
-echo new NotificationService(new Telegram())->send('hi');
+
+$notify = new NotificationService(new Telegram());
+$notify->send('hi');
